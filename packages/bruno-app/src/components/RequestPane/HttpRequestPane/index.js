@@ -33,7 +33,7 @@ const ErrorIndicator = () => {
   );
 };
 
-const HttpRequestPane = ({ item, collection, leftPaneWidth }) => {
+const HttpRequestPane = ({ item, collection }) => {
   const dispatch = useDispatch();
   const tabs = useSelector((state) => state.tabs.tabs);
   const activeTabUid = useSelector((state) => state.tabs.activeTabUid);

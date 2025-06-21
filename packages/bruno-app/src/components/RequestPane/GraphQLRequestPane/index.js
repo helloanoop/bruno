@@ -19,7 +19,7 @@ import StyledWrapper from './StyledWrapper';
 import Documentation from 'components/Documentation/index';
 import GraphQLSchemaActions from '../GraphQLSchemaActions/index';
 
-const GraphQLRequestPane = ({ item, collection, leftPaneWidth, onSchemaLoad, toggleDocs, handleGqlClickReference }) => {
+const GraphQLRequestPane = ({ item, collection, onSchemaLoad, toggleDocs, handleGqlClickReference }) => {
   const dispatch = useDispatch();
   const tabs = useSelector((state) => state.tabs.tabs);
   const activeTabUid = useSelector((state) => state.tabs.activeTabUid);
@@ -66,7 +66,6 @@ const GraphQLRequestPane = ({ item, collection, leftPaneWidth, onSchemaLoad, tog
             collection={collection}
             theme={displayedTheme}
             schema={schema}
-            width={leftPaneWidth}
             onSave={onSave}
             value={query}
             onRun={onRun}
